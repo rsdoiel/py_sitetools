@@ -1,0 +1,31 @@
+{{ define "page.tmpl" }}
+{{- /*
+General purpose index.html page template.
+
+Expected Objects:
+
++ .content
+
+*/ -}}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    {{ with .page_title -}}<title>{{- . -}}</title>{{- end }}
+    {{with .CSS -}}<a rel="stylesheet" href="{{- . -}}">{{- else -}}<link rel="stylesheet" href="/css/site.css">{{- end}}
+</head>
+<body>
+<header>
+<a href="/" title="link to Homepage"><img src="/assets/oq.svg" alt="A placeholder for a logo"></a>
+</header>
+
+{{ with .nav -}}<nav class="site-nav">{{ . }}</nav>{{- end }}
+{{ with .content -}}<section class="article-copy">{{- . -}}</section>{{- end }}
+
+<footer>
+<span>&copy; 2019 <a href="https://example.org">Example ORG Publisher</a></span>
+<address>1234 West Anywhere Ave. Anytown, Nowhere Provence, Some Country</address>
+</footer>
+</body>
+</html>
+{{ end }}
