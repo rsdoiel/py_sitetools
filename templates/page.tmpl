@@ -4,6 +4,7 @@ General purpose index.html page template.
 
 Expected Objects:
 
++ .metadata
 + .content
 
 */ -}}
@@ -11,7 +12,7 @@ Expected Objects:
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    {{ with .page_title -}}<title>{{- . -}}</title>{{- end }}
+    {{ with .front_matter.title -}}<title>{{- . -}}</title>{{- end }}
     {{with .CSS -}}<a rel="stylesheet" href="{{- . -}}">{{- else -}}<link rel="stylesheet" href="/css/site.css">{{- end}}
 </head>
 <body>
@@ -20,10 +21,22 @@ Expected Objects:
 </header>
 
 {{ with .nav -}}<nav class="site-nav">{{ . }}</nav>{{- end }}
-{{ with .content -}}<section class="article-copy">{{- . -}}</section>{{- end }}
+<section class="page-copy">
+{{ with .front_matter }}
+<h1>{{- .title -}}</h1>
+<h2 class="byline">{{- .byline -}}</h2>
+{{- end }}
+{{ with .content -}}<div class="content">{{- . -}}</div>{{- end }}
+</section>
+
+<section class="front-matter-example">
+<code><pre>
+{{ printf "%s\n" (stringify .front_matter true) }}
+</pre></code>
+</section>
 
 <footer>
-<span>&copy; 2019 <a href="https://example.org">Example ORG Publisher</a></span>
+<span>&copy; 2219 <a href="https://example.org">example.org</a></span>
 <address>1234 West Anywhere Ave. Anytown, Nowhere Provence, Some Country</address>
 </footer>
 </body>

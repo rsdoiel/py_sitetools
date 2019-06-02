@@ -2,7 +2,7 @@
 {
     "id": "3",
     "output": "three/index.html",
-    "title" : "Sub folder 'three' index page",
+    "title" : "Oq, showing Independence of doc path and site path",
     "creators": [ "J. Q. Public", "R. S. Doiel" ],
     "byline": "By Erroneous Anonymous and Almost Anonymous",
     "pub_date": "1945-01-02"

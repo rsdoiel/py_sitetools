@@ -57,8 +57,8 @@ for key in keys:
         if os.path.exists(d_name) == False:
             os.makedirs(d_name, exist_ok = True)
         page_data = [
-#            f"'metadata=json:{json.dumps(page['metadata'])}'",
             f"content={page['content']}",
+            f"front_matter=json:{json.dumps(page['metadata'])}",
         ]
         err = mkpage(f_name, [ "templates/page.tmpl" ], page_data)
         if err != "":
