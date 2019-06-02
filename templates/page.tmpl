@@ -24,8 +24,7 @@ Expected Objects:
 <section class="page-copy">
 {{ with .front_matter }}
 <h1>{{- .title -}}</h1>
-<h2 class="byline">{{- .byline -}}</h2>
-<h3 class="pub-date">{{- .pub_date -}}</h3>
+<h2><span class="byline">{{- .byline -}}</span>, <span class="pub-date">{{- .pub_date -}}</span></h2>
 {{- end }}
 {{ with .content -}}<div class="content">{{- . -}}</div>{{- end }}
 </section>
