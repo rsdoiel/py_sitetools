@@ -2,7 +2,7 @@
 {
     "id": "2",
     "output": "two/index.html",
-    "title" : "Oq, two - about page generation",
+    "title" : "Oq, two - about page name generation",
     "creators": [ "J. Q. Public" ],
     "byline": "By Erroneous Anonymous",
     "pub_date": "1845-01-02"

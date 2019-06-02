@@ -25,6 +25,7 @@ Expected Objects:
 {{ with .front_matter }}
 <h1>{{- .title -}}</h1>
 <h2 class="byline">{{- .byline -}}</h2>
+<h3 class="pub-date">{{- .pub_date -}}</h3>
 {{- end }}
 {{ with .content -}}<div class="content">{{- . -}}</div>{{- end }}
 </section>
