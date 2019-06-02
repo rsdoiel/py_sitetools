@@ -43,7 +43,7 @@ def mkpage(output_filename, templates = [], data = []):
 # if none found.
 #
 def frontmatter(input_filename):
-    cmd = ['frontmatter', '-i', input_filename]
+    cmd = ['frontmatter', '-json', '-i', input_filename]
     src = ''
     with Popen(cmd, stdout = PIPE, stderr = PIPE) as proc:
         err = proc.stderr.read().strip().decode('utf-8')
