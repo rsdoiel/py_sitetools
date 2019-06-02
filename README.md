@@ -8,14 +8,16 @@ command line tools for building light weight boutique static
 
 ## Example boutique static site generator
 
-[boutique.py](boutique.py) content management system built using
-using [py_dataset](https://github.com/caltechlibrary/py_dataset), 
+At less than 80 lines of Python [boutique.py](boutique.py) 
+is an example of how easy it is to make a content management
+system building on 
+[py_dataset](https://github.com/caltechlibrary/py_dataset), 
 and py_sitetools. 
 
-Boutique reads a "docs" folder for Markdown files, inguests them
+Boutique reads a "docs" folder for Markdown files, ingests them
 into a dataset collection called "boutique.ds". Each markdown
 file is expected to have a JSON front matter section with the
-following fields.
+following fields--
 
 + id (any unique string)
 + title (title of page)
@@ -24,13 +26,13 @@ following fields.
 + pub_date (date of publication)
 + output the filename and path to render to relative to the site root
 
-On inguest the front matter is separate from the markdown document 
+On ingest the front matter is separate from the markdown document 
 creating a record structure like
 
 ```json
     {
         "metadata": { ... },
-        "content" : " ... "
+        "content" : PATH_TO_MARKDOWN_DOC
     }
 ```
 
@@ -42,8 +44,7 @@ _boutique.py_ program as **site_dir**. The layout of the website
 is idependent of the contents of the docs directory. Each page
 identifies explicitly where it will be published to.
 
-The whole Python 3 script for _boutique.py_ is less than 100 lines
-including comments.
-
+The whole Python 3 script for _boutique.py_ is about 80 lines, the whole
+**py_sitetools** is under 200 (including boutque.py).
 
 

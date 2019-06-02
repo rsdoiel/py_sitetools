@@ -9,12 +9,16 @@
 }
 ---
 
-# This is the sub folder 'three' index page
+[Home](/) | [Two](/two/) | [Three](/three/)
 
-Blah, Blah, Blah, some sub folder this is now.
+# This "three" sub folder landing page
 
-What is interesting about this index page is that is
-comes from docs/two/index.md but gets written out as
-htdocs/three/index.html.
+It was rendered from the "docs/two/index.md" file. The
+front matter included in this file meant the document
+created would instead be in the [htdocs/three/index.html](/three/)
+path of the site directory. In this way boutique.py is
+supporting naming independent of where files are stored based
+solely on the front matter directing the output.
+
 
 

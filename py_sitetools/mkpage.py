@@ -23,7 +23,6 @@ def mkpage(output_filename, templates = [], data = []):
         cmd.append(item)
     for tmpl in templates:
         cmd.append(tmpl)
-    print(f"DEBUG cmd -> {' '.join(cmd)}")
     with Popen(cmd, stdout = PIPE, stderr = PIPE) as proc:
         err = proc.stderr.read().strip().decode('utf-8')
         if err != '':

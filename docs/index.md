@@ -9,7 +9,12 @@
 }
 ---
 
-# This is the sub folder 'two' index page
+[Home](/) | [Two](/two/) | [Three](/three/)
 
-Blah, Blah, Blah, some sub folder this is now.
+# The "two" folder's landing page
+
+It came from the "docs/index.md" file but is rendered
+to [two/index.html](/two/) in the site directory via
+directives in its front matter.
+
 

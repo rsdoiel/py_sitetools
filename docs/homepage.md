@@ -9,10 +9,14 @@
 }
 ---
 
-# Boutique generate website
+[Home](/) | [Two](/two/) | [Three](/three/)
+
+# Oq, a "boutique" generated website
 
 This is a demo of using Markdown documents with simple
 JSON front matter to generate a static website with 
-`boutique.py` using [py_sitetools](https://github.com/rsdoiel/py_sitetools)`, [py_dataset](https://github.com/caltechlibrary/py_dataset) and 
-[lunr]() and [lunrjs](https://lunrjs.com).
+`boutique.py` using [py_sitetools](https://github.com/rsdoiel/py_sitetools)`and [py_dataset](https://github.com/caltechlibrary/py_dataset).
+
+This file was create in "docs/homepage.md" but gets rendered to
+[index.html](/) in the site directory folder.
 
